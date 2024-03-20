@@ -18,11 +18,17 @@ body {
 
 h1 {
     color: #fff;
-    padding: 1em;
+    padding: 1rem;
     text-align: center;
 
 }
 
-s input {
+form {
+    background-color: rgb(105, 81, 241);
+    padding: 3em;
+    border-radius: 5px;
+}
+
+input {
     padding: .3em;
 }
