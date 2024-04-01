@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Metadatos-redes-sociales -->
+        <meta property="og:type" content="blog">
+        <meta property="og:title" content="¡Primer planeta habitable fuera del sistema solar!">
+        <meta property="og:url" content="http://127.0.0.1:5500/index.html">
+        <meta property="og:image" content="http://127.0.0.1:5500/img/planeta.jpg">
+        <meta property="og:description"
+            content="Un equipo internacional de astrónomos anunció hoy el emocionante descubrimiento del primer planeta potencialmente habitable fuera del sistema solar.">
+        <!--/ Metadatos-redes-sociales-->
+
+        <link rel="stylesheet" href="style.css">
+        <title>Desarrollador web Trainee</title>
+        <meta name="description"
+            content="Desarrollador trainee listo para sumergirse en proyectos y contribuir. Utilizo HTML, CSS, JavaScript y ReactJS, una herramienta invaluable para el desarrollo web moderno, permitiendo a los desarrolladores crear interfaces de usuario dinámicas y receptivas con facilidad y eficiencia.">
+    </head>
+
+    <body>
+
+        <h1>Escalas - Modos Griegos</h1>
+        <main>
+            <div class="container-btn">
+                <button class="btn active">Jónico</button>
+                <button class="btn">Dórico</button>
+                <button class="btn">Frigio</button>
+                <button class="btn">Lidio</button>
+                <button class="btn">Mixolidio</button>
+                <button class="btn">Eólico</button>
+                <button class="btn">Locrio</button>
+
+            </div>
+            <article class="info-container">
+                <h1>Jónico</h1>
+                <ul>
+                    <li>Estructura: T-T-S-T-T-T-S</li>
+                    <li>Géneros: Música clásica, jazz, pop, rock.</li>
+                    <li>Descripción: Tiene un carácter brillante y alegre. Es el mismo que la escala mayor y se utiliza
+                        comúnmente en la música pop, clásica y jazz.</li>
+
+
+                </ul>
+
+            </article>
+            <article class="info-container" hidden>
+                <h1>Dórico</h1>
+                <ul>
+                    <li>Estructura: T-S-T-T-T-S-T</li>
+                    <li>Géneros: Música clásica (especialmente música antigua), jazz, blues, rock, metal.</li>
+                    <li>Sonoridad: Solemne, seria, a menudo utilizada para expresar melancolía o introspección.</li>
+
+
+                </ul>
+
+
+
+            </article>
+            <article class="info-container" hidden>
+                <h1>Frigio</h1>
+                <ul>
+                    <li>Estructura: S-T-T-T-S-T-T</li>
+                    <li>Géneros: Música clásica (especialmente música medieval), flamenco, metal, rock.</li>
+                    <li>Sonoridad: Misteriosa, exótica, se usa para crear ambientes oscuros o intensos.</li>
+
+
+                </ul>
+
+            </article>
+
+            <article class="info-container" hidden>
+                <h1>Lidio</h1>
+                <ul>
+                    <li>Estructura: T-T-T-S-T-T-S</li>
+                    <li>Géneros: Jazz, música clásica contemporánea, música experimental.</li>
+                    <li>Sonoridad: Brillante, majestuosa, con un matiz de misterio debido al intervalo aumentado entre
+                        la 4ª y la tónica.</li>
+
+
+                </ul>
+
+            </article>
+            <article class="info-container" hidden>
+                <h1>Mixolidio</h1>
+                <ul>
+                    <li>Estructura: T-T-S-T-T-S-T</li>
+                    <li>Géneros: Jazz, blues, rock, música folclórica.</li>
+                    <li>Sonoridad: Groovy, alegre pero con un toque de melancolía debido a la 7ª menor.</li>
+
+
+                </ul>
+
+            </article>
+            <article class="info-container" hidden>
+                <h1>Eólico</h1>
+                <ul>
+                    <li>Estructura: T-S-T-T-S-T-T</li>
+                    <li>Géneros: Música clásica, jazz, blues, rock, metal.</li>
+                    <li>Sonoridad: Melancólica, introspectiva, a menudo utilizada para expresar emociones profundas y
+                        tristes.</li>
+
+
+                </ul>
+
+            </article>
+            <article class="info-container" hidden>
+                <h1>Locrio</h1>
+                <ul>
+                    <li>Estructura: S-T-T-S-T-T-T</li>
+                    <li>Géneros: Raramente utilizado en la música moderna debido a su sonoridad disonante y poco
+                        convencional.</li>
+                    <li>Sonoridad: Inestable, tensa, se utiliza ocasionalmente para crear efectos de suspense o tensión
+                        en la música contemporánea.</li>
+
+
+                </ul>
+
+            </article>
+
+
+
+        </main>
+
+
+        <script>
+
+            const $allInfoContainer = document.querySelectorAll('.info-container');
+            const $allBtn = document.querySelectorAll('.btn');
+
+            $allBtn.forEach((btn, i) => {
+
+                btn.addEventListener('click', () => {
+
+                    $allInfoContainer.forEach((item, i) => {
+                        $allBtn[i].classList.remove('active')
+                        item.setAttribute('hidden', '')
+                    })
+                    btn.classList.add('active')
+                    $allInfoContainer[i].removeAttribute('hidden')
+                })
+
+            })
+
+
+
+        </script>
+
+    </body>
+
+</html>
