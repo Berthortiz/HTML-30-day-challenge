@@ -11,25 +11,48 @@
     </head>
 
     <body>
+        <h1>Videos</h1>
+        <br>
         <main>
-            <h1>¡Hola! Soy Bert Ortiz</h1>
-            <br>
-            <p>
-                Me encanta el desarrollo <mark>front-end</mark> con un enfoque especial
-                en <a href="https://lenguajecss.com/css/">CSS</a>.
-                En este momento, me encuentro inmerso en un intenso proceso de aprendizaje, decidido a dominar esta
-                tecnología y avanzar en mi carrera profesional.
-                Desde que me adentré en el mundo del <mark>desarrollo web</mark>, CSS ha sido una de mis áreas de mayor
-                interés. Aquí hay
-                algunas razones por las cuales estoy tan apasionado por este <mark>lenguaje.</mark></p>
-            <br>
 
 
-            <iframe class="video" src="https://www.youtube.com/embed/cQIlwKSAyAc"></iframe>
 
+            <iframe class="video" name="iframe-yt" src="https://www.youtube.com/embed/ckl7nhVduJY"></iframe>
+            <div class="container-btn">
+                <a href="https://www.youtube.com/embed/ckl7nhVduJY" class="active" target="iframe-yt"> Intro </a>
+                <a href="https://www.youtube.com/embed/Q1CXWBtxKZU" target="iframe-yt"> CSS Grid</a>
+                <a href="https://youtube.com/embed/yMRJsEmCQD8" target="iframe-yt">Pollo</a>
+                <a href="https://www.youtube.com/embed/OjI8jMcKN8s" target="iframe-yt">Gameboy</a>
+                <a href="https://www.youtube.com/embed/l0aG2spP0Uk" target="iframe-yt">Curso Astro</a>
+            </div>
 
 
         </main>
+
+        <script>
+            const $containerBtn = document.querySelector('.container-btn')
+            const $links = document.querySelectorAll('a')
+            console.log($links);
+
+
+            $containerBtn.addEventListener('click', (event) => {
+                const etiquetaA = event.target.tagName === 'A'
+
+                if (event.target.tagName !== 'A') return
+
+                $links.forEach((link) => {
+                    link.classList.remove('active')
+                })
+
+                if (etiquetaA) {
+                    event.target.classList.add('active')
+                }
+
+            })
+
+
+
+        </script>
     </body>
 
 </html>

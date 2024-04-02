@@ -134,8 +134,8 @@
                 btn.addEventListener('click', () => {
 
                     $allInfoContainer.forEach((item, i) => {
-                        $allBtn[i].classList.remove('active')
                         item.setAttribute('hidden', '')
+                        $allBtn[i].classList.remove('active')
                     })
                     btn.classList.add('active')
                     $allInfoContainer[i].removeAttribute('hidden')
